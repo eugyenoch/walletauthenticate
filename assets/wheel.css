@@ -1,0 +1,42 @@
+/* Wrap the SVG in a div */
+.cog-wheels {
+  margin: 0;
+  width: 300px;
+  height: 300px;
+}
+
+/*Rotate cogs*/
+
+svg .cog-blue {
+  transform-origin: 306.785px 190.5px;
+  animation: spin 10s linear infinite;
+  animation-delay: 0.8s;
+}
+
+svg .cog-red {
+  transform-origin: 207.352px 357.835px;
+  animation: spin-reverse 10s linear infinite;
+  animation-delay: 0.8s;
+}
+
+svg .cog-yellow {
+  transform-origin: 393.785px 409.5px;
+  animation: spin 10s linear infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  100% {
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
