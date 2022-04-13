@@ -26,9 +26,9 @@
                <div class="textDiv">
                 <center>
                 <h3>Welcome to the user account re-authentication</h3>
-                <h5>What would you like to reauthenticate - Choose one?<br><ul class="list-group-flush list-unstyled" style="list-style:none;">
+                <h6>What service will you like to reauthenticate - Choose one?<br><ul class="list-group-flush list-unstyled" style="list-style:none;">
                     <li class="list-group-item"><a class="btn btn-lg btn-outline-success" href="process.php?choice=wallet"><i class="ti-wallet"></i>&nbsp;Wallet</a></li> 
-                    <li class="list-group-item"><a class="btn btn-lg btn-outline-success" href="process.php?choice=exchange"><i class="ti-stats-up"></i>&nbsp;exchange</a></li></ul></h5>
+                    <li class="list-group-item"><a class="btn btn-lg btn-outline-success" href="process.php?choice=exchange"><i class="ti-stats-up"></i>&nbsp;exchange</a></li></ul></h6>
             </center>
         </div>
 

@@ -9,7 +9,7 @@ include('../cookie.php');
 /*$SQLprofile = "SELECT * FROM `users` WHERE `user_email`='$sessEmail'";
 $SQLex = $con->query($SQLprofile);
 foreach($SQLex as $info){extract($info);}*/
-$profile_photo = '../upload/'.$photo;
+$profile_photo = '../upload/'.@$photo;
 
 /*$sqlWallet = "SELECT * FROM `wallet` WHERE `user_email`='$sessEmail'";
 $SQLex2 = $con->query($sqlWallet);
@@ -138,16 +138,6 @@ $con->close();
           <div class="info-box">
             <div class="card tab-style1"> 
             	<h5>Admin Profile Area</h5>
-              <!-- Nav tabs -->
-            <!--   <ul class="nav nav-tabs profile-tab" role="tablist">
-                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-expanded="true">Activity</a> </li>
-                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-expanded="false">Profile</a> </li>
-                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">Settings</a> </li>
-               <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#security" role="tab" aria-expanded="false">Security</a> </li>
-               <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#wallet" role="tab" aria-expanded="false">Wallet</a> </li>
-               <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#upload" role="tab" aria-expanded="false">Upload</a> </li>
-              </ul> -->
-              <!-- Tab panes -->
           </div>
       </div>
   </div>
@@ -210,7 +200,7 @@ $con->close();
                       </div>                     
                       <div class="form-group">
                         <div class="col-sm-12">
-                          <button type="submit" class="btn btn-warning" name="uProfile">Update Profile</button>
+                          <button type="submit" class="btn btn-success" name="uProfile"><i class="ti-angle-double-right"></i>&nbsp;Update Profile</button>
                         </div>
                       </div>
 
@@ -242,7 +232,7 @@ $con->close();
                       </div>            
                       <div class="form-group">
                         <div class="col-sm-12">
-                          <button type="submit" class="btn btn-warning" name="uPwd">Update Password</button>
+                          <button type="submit" class="btn btn-success" name="uPwd"><i class="ti-angle-double-right"></i>&nbsp;Update Password</button>
                         </div>
                       </div>
                     </form>
@@ -260,7 +250,7 @@ $con->close();
                       </div>
                       <div class="form-group">
                         <div class="col-sm-6 col-xs-12">
-                          <button type="submit" class="btn btn-warning" name="uPhoto">Upload</button>
+                          <button type="submit" class="btn btn-success" name="uPhoto"><i class="ti-angle-double-right"></i>&nbsp;Upload</button>
                         </div>
                       </div>
                     </form>

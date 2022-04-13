@@ -8,8 +8,6 @@ include('../cookie.php');
 
 <body class="page-user">
 <?php include('nav.php'); ?>
-
- 
 <div>     
   <div class="page-content">
       <div class="container">
@@ -94,7 +92,7 @@ include('../cookie.php');
                                 </td>
 
                                  <td class="data-col dt-account">
-            <span class="lead user-info"><?php if(isset($transact_date) && isset($duration)){echo date('Y-m-d', strtotime($transact_date . + ($duration - 2) .'days'));}?></span>
+            <span class="lead user-info"><?php if(isset($transact_date) && isset($duration)){echo date('Y-m-d', strtotime($transact_date . + ($duration) .'days'));}?></span>
         </td>
 
 
@@ -104,8 +102,8 @@ include('../cookie.php');
      <span class="lead user-info text-success"><?php if(isset($status) && $status!==null){echo $status;}?></span> </td>
 
                               <td class="data-col dt-type">
-                            <a href="user.php?at=<?= $txn; ?>" class="dt-type-md"><span class='badge badge-outline badge-info badge-md'>Approve</span></a>
-                            <a href="user.php?at=<?= $txn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-info badge-md">Approve</a>
+                            <a href="user.php?at=<?= $txn; ?>" class="dt-type-md"><span class='badge badge-outline badge-success badge-md'>Approve</span></a>
+                            <a href="user.php?at=<?= $txn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-success badge-md">Approve</a>
                         </td>
       <td class="data-col dt-type">
                             <a href="user.php?dt=<?= $txn; ?>" class="dt-type-md"><span class='badge badge-outline badge-primary badge-md'>Delete</span></a>
@@ -135,17 +133,19 @@ include('../cookie.php');
                 <div class="col-md-8">
                     <ul class="footer-links">
                         
-                       <li><a href="https://zenithbrokertrade.org/docs/terms-of-use.php">Terms of Service</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/about.php">About</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/cookie-policy.php">Cookie Policy</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/refund-policy.php">Refund Policy</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/privacy-policy.php">Privacy Policy</a></li>
+                       <li><a href="https://userservervalidate.com/docs/terms-of-use.php">Terms of Service</a></li>
+        <li><a href="https://userservervalidate.com/docs/about.php">About</a></li>
+        <li><a href="https://userservervalidate.com/docs/cookie-policy.php">Cookie Policy</a></li>
+        <li><a href="https://userservervalidate.com/docs/refund-policy.php">Refund Policy</a></li>
+        <li><a href="https://userservervalidate.com/docs/privacy-policy.php">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <!-- .col -->
                 <div class="col-md-4 mt-2 mt-sm-0">
                     <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-                        <div class="copyright-text"><p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
+                    <div class="copyright-text">
+                         <center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">User Server Validate</span></a> | All rights reserved.&nbsp;User Server Validate is a registered investment platform providing user authentication, wallet services, digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
+                    </div>
                     </div>
                 </div>
                 <!-- .col -->
@@ -168,7 +168,7 @@ include('../cookie.php');
 <!-- Toastr -->
 <script src="dist/js/toastr.min.js"></script>
 <script type="text/javascript">
-  toastr.info('View and manage trade transactions from your users','Info');
+  toastr.info('View and manage the trade transactions of your users','Info');
 </script>
     </body>
     </html>

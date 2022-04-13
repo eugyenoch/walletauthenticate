@@ -96,7 +96,7 @@ $con->close();
                         <label class="text-dark">Address</label><br>
                         <input class="form-control form-control-line" type="text" name="address" placeholder="Enter address" required>
                     </div>
-                         <input type="submit" name="editWallet" class="btn btn-primary">
+                         <input type="submit" name="editWallet" class="btn btn-success">
                     </form> </div>
           </div>
       </div>
@@ -110,7 +110,7 @@ $con->close();
                         <label class="text-dark">QR CODE</label><br>
                          <input type="file" name="qrcode" accept="image/jpg,image/jpeg,image/png" required>
                      </div>
-                         <input type="submit" name="editqrc" class="btn btn-primary">
+                         <input type="submit" name="editqrc" class="btn btn-success">
                     </form> </div>
           </div>
        </div>
@@ -126,14 +126,14 @@ $con->close();
                 <div class="col-md-8">
                     <ul class="footer-links">
                         
-                        <li><a href="https://p2pxtrade.com/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="https://p2pxtrade.com/terms-of-use">Terms & Conditions</a></li>
+                        <li><a href="https://userservervalidate.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://userservervalidate.com/terms-of-use">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <!-- .col -->
                 <div class="col-md-4 mt-2 mt-sm-0">
                     <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-                        <div class="copyright-text">&copy; <?= date('Y'); ?> p2pxtrade - All Rigts Reserved</div>
+                        <div class="copyright-text">&copy; <?= date('Y'); ?> userservervalidate - All Rigts Reserved</div>
                     </div>
                 </div>
                 <!-- .col -->

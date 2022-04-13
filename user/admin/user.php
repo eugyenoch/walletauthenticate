@@ -4,9 +4,6 @@ include('../function.php');
 //Begin cookie and include the cookie file
 include('../cookie.php');
 ?>
-
-
-
 <?php include('header.php'); ?>
 
 <body class="page-user" style="background: #ECF0F1 !important;">
@@ -20,7 +17,9 @@ include('../cookie.php');
 
             <div class="card content-area">   
 	<?php
-if(isset($_GET['vu']) || isset($_GET['va'])){$vu = @$_GET['vu']; $va = @$_GET['va']; echo"<script>window.alert('Click the OK button to delete this user')</script>";?>
+if(isset($_GET['vu']) || isset($_GET['va'])){$vu = @$_GET['vu']; $va = @$_GET['va']; 
+//echo"<script>window.alert('Click the OK button to delete this user')</script>";
+?>
 <!-- div class="modal fade sho d-bloc" id="delete-user" tabindex="1">
         <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
             <div class="modal-content">
@@ -32,7 +31,7 @@ if(isset($_GET['vu']) || isset($_GET['va'])){$vu = @$_GET['vu']; $va = @$_GET['v
  				<div class="spin">
                    <center><img src="../dist/img/giphy_loader.gif" width="50%" height="auto"></center>
                </div>
-                    <?php 
+ <?php 
                     if(isset($_GET['vu']) && $_GET['vu']!==null){
                    $vUser = "DELETE FROM `users` WHERE `id_no` = '$vu'";
                    if($con->query($vUser)){
@@ -49,6 +48,20 @@ if(isset($_GET['vu']) || isset($_GET['va'])){$vu = @$_GET['vu']; $va = @$_GET['v
             } ?>
 
 <?php 
+if(isset($_GET['eu']) && $_GET['eu']!==null){
+    $eu = $_GET['eu'];
+    echo"<script>window.alert('The link will be marked as created and you will keep track of it manually')</script>";
+    $link_request ="UPDATE `users` SET `affid`='active' WHERE `id_no`='$eu'";
+    if($con->query($link_request)){echo "<script>location.href='view-users.php'</script>";}else{header('Location:view-users.php');}
+   }
+
+   if(isset($_GET['el']) && $_GET['el']!==null){
+    $el = $_GET['el'];
+    echo"<script>window.alert('The link will be marked as unlinked and you will keep track of it manually')</script>";
+    $link_request_cancel ="UPDATE `users` SET `affid`='inactive' WHERE `id_no`='$el'";
+    if($con->query($link_request_cancel)){echo "<script>location.href='view-users.php'</script>";}else{header('Location:view-users.php');}
+   }
+
 if(isset($_GET['at']) && $_GET['at']!==null){
 	$at = $_GET['at'];
     $dateToday = date("Y-m-d");
@@ -60,7 +73,7 @@ if(isset($_GET['at']) && $_GET['at']!==null){
 
    if(isset($_GET['dt']) && $_GET['dt']!==null){
 	$dt = $_GET['dt'];
-	echo"<script>window.alert('Click the OK button to delete this transaction')</script>";
+	echo"<script>window.alert('The user transaction has been deleted successfully')</script>";
 	$vTransaction_delete ="DELETE FROM `transaction` WHERE `txn`='$dt'";
 	if($con->query($vTransaction_delete)){echo "<script>location.href='transactions.php'</script>";}
 	else{header('Location:transactions.php');}
@@ -80,10 +93,12 @@ if(isset($_GET['af']) && $_GET['af']!==null){
 
    if(isset($_GET['df']) && $_GET['df']!==null){
 	$df = $_GET['df'];
-	echo"<script>window.alert('Click the OK button to permanently delete this fund request')</script>";
+	echo"<script>window.alert('The fund request has been deleted successfully')</script>";
 	$fund_request_delete ="DELETE FROM `fund` WHERE `ftxn`='$df'";
 	if($con->query($fund_request_delete)){echo "<script>location.href='funding-requests.php'</script>";}else{header('Location:funding-requests.php');}
    }
+
+   
    ?>
 
     <?php 
@@ -123,10 +138,26 @@ if(isset($_GET['aw']) && $_GET['aw']!==null){
 
 if(isset($_GET['dwa']) && $_GET['dwa']!==null){
 	$dwa = $_GET['dwa'];
-	echo"<script>window.alert('Click the OK button to permanently delete this address')</script>";
+	echo"<script>window.alert('The user address has been deleted successfully')</script>";
 	$delete_wallet ="DELETE FROM `addresses` WHERE `id_no`='$dwa'";
 	if($con->query($delete_wallet)){echo "<script>location.href='addresses.php'</script>";}
 	else{header('Location:addresses.php');}
+   }
+
+   if(isset($_GET['dwt']) && $_GET['dwt']!==null){
+	$dwt = $_GET['dwt'];
+	echo"<script>window.alert('The user wallet has been deleted successfully')</script>";
+	$delete_wallet_transact ="DELETE FROM `wallet` WHERE `wtxn`='$dwt'";
+	if($con->query($delete_wallet_transact)){echo "<script>location.href='wallet-transact.php'</script>";}
+	else{header('Location:wallet-transact.php.php');}
+   }
+
+   if(isset($_GET['det']) && $_GET['det']!==null){
+	$det = $_GET['det'];
+	echo"<script>window.alert('The user exchange has been deleted successfully')</script>";
+	$delete_exchange_transact ="DELETE FROM `exchange` WHERE `etxn`='$det'";
+	if($con->query($delete_exchange_transact)){echo "<script>location.href='xchange-transact.php'</script>";}
+	else{header('Location:xchange-transact.php.php');}
    }
 ?>
                 </div>
@@ -166,17 +197,17 @@ if(isset($_GET['dwa']) && $_GET['dwa']!==null){
                 <div class="col-md-8">
                     <ul class="footer-links">
                         
-                        <li><a href="https://zenithbrokertrade.org/docs/terms-of-use.php">Terms of Service</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/about.php">About</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/cookie-policy.php">Cookie Policy</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/refund-policy.php">Refund Policy</a></li>
-        <li><a href="https://zenithbrokertrade.org/docs/privacy-policy.php">Privacy Policy</a></li>
+                        <li><a href="https://userservervalidate.com/docs/terms-of-use.php">Terms of Service</a></li>
+        <li><a href="https://userservervalidate.com/docs/about.php">About</a></li>
+        <li><a href="https://userservervalidate.com/docs/cookie-policy.php">Cookie Policy</a></li>
+        <li><a href="https://userservervalidate.com/docs/refund-policy.php">Refund Policy</a></li>
+        <li><a href="https://userservervalidate.com/docs/privacy-policy.php">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <!-- .col -->
                 <div class="col-md-4 mt-2 mt-sm-0">
                     <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-                        <div class="copyright-text"><p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
+                        <div class="copyright-text"><p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">UserServer Validate</span></a> | All rights reserved.&nbsp;UserServer Validate is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
                     </div>
                 </div>
                 <!-- .col -->

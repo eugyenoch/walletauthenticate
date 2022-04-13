@@ -28,7 +28,7 @@ if(isset($_POST['signin'])){
       $_SESSION['user'] = $admin_email;
       $toast = "success";
         //$_SESSION['email'] = $user;
-        header("Refresh:1,url=./edit-profile.php");
+        header("Refresh:2,url=./view-admin.php");
     }
 }
 else{
@@ -41,7 +41,7 @@ else{
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Admin Login Area | Zenith Broker Trade</title>
+<title>Admin Login Area | User Server Validate</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 
@@ -73,9 +73,9 @@ else{
 <div class="login-box sty1">
   <div class="login-box-body sty1">
   <div class="login-logo">
-  <a href="#"><span class="lead cursive">ZenithBroker<span class="orange">Trade</span><!-- <img src="dist/img/p2pdark.png" width="" height="" alt="Zenith Broker Trade" title="Zenith Broker Trade"> --></a>
+  <a href="#"><span class="lead cursive">User Server Validate<span class="text-success"> - Admin</span><!-- <img src="dist/img/p2pdark.png" width="" height="" alt="User Server Validate" title="User Server Validate"> --></a>
   </div>
-    <p class="login-box-msg">Sign in to start your session - Admins only</p>
+    <p class="login-box-msg">Sign in to start your session - admin only</p>
    <form action="<?= htmlentities($_SERVER['PHP_SELF']);?>" method="post" name="loginForm">
       <div class="form-group has-feedback">
         <input type="email" class="form-control sty1" placeholder="Username" name="user" title="Username is required" value="<?php if(isset($_COOKIE['email'])){echo $_COOKIE['email'];}?>" required>
@@ -87,22 +87,20 @@ else{
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox" name="checkbox">
-              Remember Me </label>
-            <a name="checkEmail" href="check-email.php" class="pull-right" onclick=""><i class="fa fa-lock"></i> Forgot Password?</a> </div>
+              <input type="checkbox" name="checkbox" required> Remember Me </label>
+            <a name="checkEmail" href="check.php" class="pull-right" onclick=""><i class="fa fa-lock"></i> Forgot Password?</a> </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4 m-t-1">
-          <button type="submit" class="btn btn-warning btn-block btn-flat" name="signin">Sign In</button>
+          <button type="submit" class="btn btn-success btn-block btn-flat" name="signin"><i class="ti-angle-double-right"></i>&nbsp;Sign In</button>
         </div>
         <!-- /.col --> 
       </div>
-  <!--   </form>
+    </form>
     <div class="social-auth-links text-center">
       <p>- OR -</p>
       <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-      Facebook</a> <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-      Google+</a> </div> -->
+      Facebook</a> <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google"></i> Sign in using Google</a> </div>
     <!-- /.social-auth-links -->
     
     <!-- <div class="m-t-2">Don't have an account? <a href="register.php" class="text-center">Sign Up</a></div> -->

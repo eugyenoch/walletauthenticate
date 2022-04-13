@@ -90,8 +90,8 @@ $folder_image = "../upload/";
                         </td>
 
                         <td class="data-col dt-type">
-                            <a href="user.php?af=<?= $ftxn; ?>" class="dt-type-md"><span class='badge badge-outline badge-info badge-md'>Approve</span></a>
-                            <a href="user.php?af=<?= $ftxn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-info badge-md">A</a>
+                            <a href="user.php?af=<?= $ftxn; ?>" class="dt-type-md"><span class='badge badge-outline badge-success badge-md'>Approve</span></a>
+                            <a href="user.php?af=<?= $ftxn; ?>" class="dt-type-sm badge badge-sq badge-outline badge-success badge-md">A</a>
                         </td>
 
                         <td class="data-col dt-type">
@@ -131,7 +131,7 @@ $folder_image = "../upload/";
                 <!-- .col -->
                 <div class="col-md-4 mt-2 mt-sm-0">
                     <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-                        <div class="copyright-text"><p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">Zenith Broker Trade</span></a> | All rights reserved.&nbsp;<!-- Zenith Broker Trade - The easiest place to invest bitcoin. -->Zenith Broker Trade is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
+                        <div class="copyright-text"><p style="padding:10px 0 !important;"><center><small>©&nbsp;<?= date('Y');?>&nbsp;<a href="#"><span class="orange">User Server Validate</span></a> | All rights reserved.&nbsp;<!-- User Server Validate - The easiest place to invest bitcoin. -->User Server Validate is a registered investment platform providing digital asset investment management services to individuals, lending and investment, multicurrency and multifunctional online platform based on blockchain technology.</small></center></p></div>
                     </div>
                 </div>
                 <!-- .col -->

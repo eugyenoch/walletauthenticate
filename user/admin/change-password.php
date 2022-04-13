@@ -53,7 +53,7 @@ $con->close();
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title> Change Password | Zenith Broker Trade</title>
+<title> Change Password | User Server Validate</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 
@@ -85,7 +85,7 @@ $con->close();
 <div class="login-box sty1">
   <div class="login-box-body sty1">
   <div class="login-logo">
-   <a href="#"><span class="lead cursive">ZenithBroker<span class="orange">Trade</span><!-- <img src="dist/img/p2pdark.png" width="" height="" alt="Zenith Broker Trade" title="Zenith Broker Trade"> --></a>
+   <a href="#"><span class="lead cursive">User Server Validate - Change Password</a>
   </div>
      <h5 class="login-box-msg">Change your password</h5><br>
     <form action="<?php htmlentities($_SERVER['PHP_SELF']);?>" method="post" name="changePassword">
@@ -103,7 +103,7 @@ $con->close();
         <div class="col-xs-8">
         <!-- /.col -->
         <div class="col-xs-4 m-t-1">
-          <button type="submit" class="btn btn-warning btn-block btn-flat" name="reset">Change Password</button>
+          <button type="submit" class="btn btn-success btn-block btn-flat" name="reset"><i class="ti-angle-double-right"></i>&nbsp;Change Password</button>
         </div>
         <!-- /.col --> 
       </div>

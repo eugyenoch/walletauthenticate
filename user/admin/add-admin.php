@@ -41,21 +41,21 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $pass = md5($_POST['pwd']);
   }
 
-  if(empty($_POST['cpwd'])){
-    echo "<style>.note{display:none !important;</style>";
-    $cpassErr = "Confirm password is required";
-  }
-  else{
-    $cpass = md5($_POST['cpwd']);
-  }
+  // if(empty($_POST['cpwd'])){
+  //   echo "<style>.note{display:none !important;</style>";
+  //   $cpassErr = "Confirm password is required";
+  // }
+  // else{
+  //   $cpass = md5($_POST['cpwd']);
+  // }
 
-  if($pass !== $cpass){
-    $cpassesErr = "Both passwords do not match";
-  }
+  // if($pass !== $cpass){
+  //   $cpassesErr = "Both passwords do not match";
+  // }
 
-  if(!isset($_POST['agreement'])){
-    $checkErr = "Please agree to our terms";
-  }
+  // if(!isset($_POST['agreement'])){
+  //   $checkErr = "Please agree to our terms";
+  // }
 }
 
 if(isset($_POST['addAdmin'])){
@@ -63,22 +63,22 @@ if(isset($_POST['addAdmin'])){
   //$eEmail = $_POST['eEmail'];
 
   //Extract variables from user input
-  $eFname = sanitize($_POST['eFname']);
-  $eLname = sanitize($_POST['eLname']);  
-  $ePhone = sanitize($_POST['ePhone']);
-  $eAddress = sanitize($_POST['eAddress']);
-  $eCountry = sanitize($_POST['eCountry']);
-  $city = sanitize($_POST['city']);
+  // $eFname = sanitize($_POST['eFname']);
+  // $eLname = sanitize($_POST['eLname']);  
+  // $ePhone = sanitize($_POST['ePhone']);
+  // $eAddress = sanitize($_POST['eAddress']);
+  // $eCountry = sanitize($_POST['eCountry']);
+  // $city = sanitize($_POST['city']);
 
-  $sql_insert_admin = "INSERT INTO `admin(firstname,lastname,user_email,user_pass)`VALUES('$fname','$lname','$email','$cpass')";
+  $sql_insert_admin = "INSERT INTO admin(firstname,lastname,user_email,user_pass) VALUES('$fname','$lname','$email','$pass')";
 
   if($con->query($sql_insert_admin) === TRUE){
     $toast = "success";
     header('Refresh:1');}
   else{$toast = "fail";}
 
-  $sql_wallet_insert = "INSERT INTO wallet(user_email) VALUES('$email')";
-   $con->query($sql_wallet_insert);
+  // $sql_wallet_insert = "INSERT INTO wallet(user_email) VALUES('$email')";
+  //  $con->query($sql_wallet_insert);
 
 }
 $con->close();
@@ -89,7 +89,7 @@ $con->close();
 <?php include('nav.php'); ?>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-4 col-xs-12">
+		<div class="col-md-6 m-auto col-xs-12">
  				
                   <div class="card-body">
                   		<h4 class="text-primary" style="color:steelblue !important;">Add an admin</h4>
@@ -112,7 +112,7 @@ $con->close();
       <span class="err"><?= $passErr; ?></span>
     </div>
 
-      <div class="form-group has-feedback">
+      <!-- <div class="form-group has-feedback">
         <input type="password" name="cpwd" class="form-control sty1" title="Confirm password must match the initial password entered in the box above" placeholder="Confirm Password" required><span class="note"><small>must match password entered in the box above</small></span>
         <span class="err"><?= $cpassErr; ?></span><br>
          <span class="err"><?= $cpassesErr; ?></span>
@@ -122,12 +122,12 @@ $con->close();
           <div class="checkbox icheck">
             <label>
               <input type="checkbox" name="agreement" required>
-               I agree to the <a href="https://zenithbroketrade.org/terms-of-use.php" title="View terms of use" target="_blank" rel="noopener noreferrer">Terms Of Use</a></label><br>
+               I agree to the <a href="https://userservervalidate.com/docs/terms-of-use.php" title="View terms of use" target="_blank" rel="noopener noreferrer">Terms Of Use</a></label><br>
                <span class="err"><?= $checkErr; ?></span>
              </div>
-        </div>
+        </div> -->
         <!-- /.col -->
-          <button type="submit" class="btn btn-warning btn-block btn-flat" name="reg">Sign Up</button>
+          <button type="submit" class="btn btn-success btn-block btn-flat" name="addAdmin"><i class="ti-angle-double-right"></i>&nbsp;Add Admin</button>
         </div>
         <!-- /.col --> 
       </div> 
@@ -149,7 +149,7 @@ $con->close();
 <!-- Toastr -->
 <script src="../dist/js/toastr.min.js"></script>
 <script type="text/javascript">
-  toastr.info('Use this section to add a new admin','Info');
+  toastr.info('Use this section to add another admin','Info');
 </script>
     </body>
     </html>

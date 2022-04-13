@@ -38,7 +38,7 @@ $con->close();
       
       </div>
         <!-- /.col -->
-          <button type="submit" class="btn btn-primary btn-block btn-flat" name="editAmount">Add Bonus</button>
+          <button type="submit" class="btn btn-success btn-block btn-flat" name="editAmount"><i class="ti-angle-double-right"></i>&nbsp;Add Bonus</button>
         </div>
         <!-- /.col --> 
       </div> 

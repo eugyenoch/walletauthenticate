@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Zenith Broker Trade">
+    <meta name="author" content="User Server Validate">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Zenith Broker Trade - Trusted Trade Partner">
-    <meta name="keywords" content="Escrow, Zenith Broker Trade,p2p" />
+    <meta name="description" content="User Server Validate - Trusted Trade Partner">
+    <meta name="keywords" content="Escrow, User Server Validate,p2p" />
 
     <!-- Fav Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="./dist/img/p2pdarkicon.png" />
     <link rel="icon" type="image/x-icon" href="./dist/img/p2pdarkicon.png" />
 
     <!-- Site Title  -->
-    <title>Dashboard - Zenith Broker Trade</title>
+    <title>Dashboard - User Server Validate</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="../assets/css/custom.css">

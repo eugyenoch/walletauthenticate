@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="user/dist/css/toastr.css">
 <link rel="stylesheet" type="text/css" href="assets/wheel.css">
     <style type="text/css">
          body{font-family:'Poppins', sans-serif; overflow-x:hidden;}
@@ -70,7 +71,7 @@
 }
 .textDiv{
     position: absolute;
-    top:60%;
+    top:70%;
     left: 50%;
     transform: translateX(-50%)
 }
